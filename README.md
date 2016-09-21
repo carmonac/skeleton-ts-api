@@ -1,4 +1,4 @@
-# Skeleton for api node project writted in TypeScript
+# Skeleton for api node project in TypeScript
 
 This is a Stater Kit project that implemented an api project in TypeScript separated in different layers (Business, Repository, Controllers, etc).
 The api uses JWT to make a securely connection in each request.
