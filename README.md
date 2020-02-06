@@ -1,3 +1,5 @@
+## DEPRECATED, use Nestjs since it's a better alternative
+
 # Skeleton for api node project in TypeScript
 
 This is a Starter Kit project to implement an api project in TypeScript. It is organized in different layers (Business, Repository, Controllers, etc).
