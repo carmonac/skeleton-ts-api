@@ -10,8 +10,8 @@ export class AdminController implements IBaseController<AdminBusiness> {
     create(req: express.Request, res: express.Response): void {
         try {
 
-            var admin: IAdminModel = <IAdminModel>req.body;
-            var adminBusiness = new AdminBusiness();
+            const admin: IAdminModel = <IAdminModel>req.body;
+            const adminBusiness = new AdminBusiness();
             adminBusiness.create(admin, (error, result) => {
                 if (error) res.json({ status: "error" });
                 else res.json({ status: "success" });
@@ -25,9 +25,9 @@ export class AdminController implements IBaseController<AdminBusiness> {
     }
     update(req: express.Request, res: express.Response): void {
         try {
-            var admin: IAdminModel = <IAdminModel>req.body;
-            var _id: string = req.params._id;
-            var adminBusiness = new AdminBusiness();
+            const admin: IAdminModel = <IAdminModel>req.body;
+            const _id: string = req.params._id;
+            const adminBusiness = new AdminBusiness();
             adminBusiness.update(_id, admin, (error, result) => {
                 if (error) res.json({ status: "error" });
                 else res.json({ status: "success" });
@@ -57,8 +57,8 @@ export class AdminController implements IBaseController<AdminBusiness> {
     }
     retrieve(req: express.Request, res: express.Response): void {
         try {
-            var total : any = req;
-            var adminBusiness = new AdminBusiness();
+            const total: any = req;
+            const adminBusiness = new AdminBusiness();
             adminBusiness.retrieve((error, result) => {
                 if (error) res.json({ status: "error" });
                 else res.json(result);
@@ -73,8 +73,8 @@ export class AdminController implements IBaseController<AdminBusiness> {
     findById(req: express.Request, res: express.Response): void {
         try {
 
-            var _id: string = req.params._id;
-            var adminBusiness = new AdminBusiness();
+            const _id: string = req.params._id;
+            const adminBusiness = new AdminBusiness();
             adminBusiness.findById(_id, (error, result) => {
                 if (error) res.json({ status: "error" });
                 else res.json(result);
@@ -89,8 +89,7 @@ export class AdminController implements IBaseController<AdminBusiness> {
 
     login(req: express.Request, res: express.Response): void {
         try {
-            var name: string = req.body.name;
-            var password: string = req.body.password;
+            const { name, password }: string = req.body;
             var adminBusiness = new AdminBusiness();
             adminBusiness.login(name, password, (error, result) => {
                 if (error) {
